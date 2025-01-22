@@ -1,0 +1,14 @@
+[
+  {
+    "logoUrl": "/Images/sample_logo.jpg",
+    "title": "Welcome to Our Service!",
+    "titleColor": "#fff",
+    "subtitle": "We're excited to have you onboard!",
+    "subTitleColor": "#2563EB",
+    "bodyContent": "Thank you for signing up for our service. We're thrilled to have you with us. Here's a quick overview of what you can expect from us.",
+    "bodyContentColor": "#000",
+    "bodyImageUrl": "/Images/sample_photo.png",
+    "footerText": "© 2025 Your Company Name. All Rights Reserved.",
+    "footerTextColor": "#000"
+  }
+]
