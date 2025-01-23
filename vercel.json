@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://gladidoingcode:OecuimpI9pWlJ39Y@cluster0.pbu8y8y.mongodb.net/EmailBuilder?retryWrites=true&w=majority&appName=Cluster0"
+  }
+}
