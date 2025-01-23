@@ -1,13 +1,12 @@
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-import { getLayout } from "./Controller/EmailOperations.js";
-import { saveTemplate } from "./Controller/EmailOperations.js";
-import { downloadLayout } from "./Controller/EmailOperations.js";
-import cors from "cors";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import multer from "multer";
+const express = require("express");
+const path = require("path");
+const { fileURLToPath } = require("url");
+const { getLayout, saveTemplate, downloadLayout } = require("./Controller/EmailOperations.js");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const multer = require("multer");
+
 
 //multer
 const storage = multer.diskStorage({
@@ -29,8 +28,7 @@ const upload = multer({
 });
 
 const server = express();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __dirname = path.resolve();
 
 dotenv.config();
 

@@ -1,12 +1,11 @@
-import mongoose from "mongoose";
-
+const mongoose = require("mongoose");
 
 const emailTemplateSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
     trim: true,
-    lowercase: true, 
+    lowercase: true,
   },
   logoUrl: {
     type: String,
@@ -18,7 +17,7 @@ const emailTemplateSchema = new mongoose.Schema({
   },
   titleColor: {
     type: String,
-    default: "#ffffff", // Default black color
+    default: "#ffffff", // Default white color
   },
   subtitle: {
     type: String,
@@ -26,7 +25,7 @@ const emailTemplateSchema = new mongoose.Schema({
   },
   subTitleColor: {
     type: String,
-    default: "#2563EB", // Default black color
+    default: "#2563EB", // Default blue color
   },
   bodyContent: {
     type: String,
@@ -66,4 +65,5 @@ emailTemplateSchema.pre("save", function (next) {
 
 const templates = mongoose.model("templates", emailTemplateSchema);
 
-export default templates;
+// Export the model using CommonJS
+module.exports = templates;
